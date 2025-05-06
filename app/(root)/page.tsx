@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
@@ -15,8 +16,8 @@ const page = async () => {
     await getLatestInterviews({userId: user?.id!})
   ]);
 
-  const hasPastInterviews = userInterviews?.length>0;
-  const hasUpcomingInterviews = latestInterviews?.length>0;
+  const hasPastInterviews = userInterviews?.length > 0;
+  const hasUpcomingInterviews = latestInterviews?.length > 0;
 
   return (
     <>
@@ -68,7 +69,7 @@ const page = async () => {
 
         <div className="interviews-section">
         {hasUpcomingInterviews ? (
-            userInterviews?.map((interview) => (
+            latestInterviews?.map((interview) => (
               <InterviewCard
                 key={interview.id}
                 userId={user?.id}
