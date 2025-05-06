@@ -79,7 +79,7 @@ const Agent = ({userName, userId, type, interviewId, questions}: AgentProps) => 
       }
   */
       const handleGenerateFeedback = async (messages: SavedMessage[]) => {
-        console.log("handleGenerateFeedback");
+        console.log("Generate Feedback.");
   
         /*const { success, feedbackId: id } = await createFeedback({
           interviewId: interviewId!,
@@ -129,7 +129,6 @@ const Agent = ({userName, userId, type, interviewId, questions}: AgentProps) => 
         }
 
         await vapi.start(interviewer, {
-
           variableValues: {
             questions: formattedQuestions,
           },
